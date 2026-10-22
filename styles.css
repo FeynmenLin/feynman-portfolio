@@ -1270,3 +1270,54 @@ body.has-custom-cursor.cursor-hover .cursor-ring {
     display: none !important;
   }
 }
+
+/* —— Full-card hit targets —— */
+.card,
+.mini {
+  position: relative;
+}
+
+.card-hit,
+.mini-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  border-radius: inherit;
+  color: transparent !important;
+  text-indent: -9999px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card-hit:focus-visible,
+.mini-hit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  text-indent: 0;
+  color: transparent !important;
+}
+
+.card-actions .link,
+.mini .links .link {
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+.card-actions .link {
+  font-size: 0.88rem;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+
+.card:hover .card-actions .link,
+.mini:hover .links .link {
+  border-bottom-color: var(--accent);
+  color: var(--accent-deep);
+}
+
+.mini .links .link {
+  font-size: 0.84rem;
+  color: var(--accent);
+}

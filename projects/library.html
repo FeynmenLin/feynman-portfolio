@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Feynman的图书馆：书库、阅读与人物关系图等案例功能说明。" />
+  <meta name="author" content="Feynman / 林登凯" />
+  <meta name="theme-color" content="#f4ebe0" />
+  <title>Feynman的图书馆 · 功能说明</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="projects.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topnav is-scrolled" id="topnav">
+    <div class="wrap inner">
+      <a class="brand" href="../index.html#top" aria-label="回到作品集首页">
+        <span class="en">Feynman</span>
+        <span class="zh">林登凯</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="../index.html#featured">精选</a>
+        <a href="../index.html#more">更多</a>
+        <a href="../index.html#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap case-page" id="main">
+    <a class="case-back" href="../index.html#featured">← 返回精选</a>
+
+    <p class="case-kicker">Case · Reader · PWA</p>
+    <h1 class="case-title">Feynman的图书馆</h1>
+    <p class="case-pitch">
+      面向深度阅读的古典文本阅读器：布面书架、上下滚动 / 左右翻页、高亮脚注与人物关系图。
+      线上站点需登录访问；本页用真实界面与功能清单说明产品能力。
+    </p>
+
+    <div class="case-meta-row">
+      <span class="tag">阅读器 · PWA</span>
+      <span class="tag muted">登录访问</span>
+      <span class="tag muted">案例页</span>
+    </div>
+
+    <section class="case-panel" aria-labelledby="features-title">
+      <h2 id="features-title">具体功能</h2>
+      <ul class="feature-list">
+        <li>
+          <strong>布面书架与续读</strong>
+          书库首页以布面封面陈列书目，并提供「继续阅读」入口回到上次进度。
+        </li>
+        <li>
+          <strong>阅读模式切换</strong>
+          支持上下滚动与左右翻页；阅读进度、段落标记与页内导航一并呈现。
+        </li>
+        <li>
+          <strong>高亮与脚注</strong>
+          文本可高亮；Stephanus 编码与脚注方便对照古典文献引用。
+        </li>
+        <li>
+          <strong>此处 / 在场侧栏</strong>
+          阅读时展开人物、地点与术语卡片，并显示当前在场信息。
+        </li>
+        <li>
+          <strong>人物关系图</strong>
+          资料馆按书目筛选人物网络（师承、朋友、对谈等），把文本人物关系可视化。
+        </li>
+        <li>
+          <strong>登录访问 · PWA</strong>
+          内容与账号绑定；真机可安装为 PWA。线上需登录，作品集以功能页展示能力。
+        </li>
+      </ul>
+    </section>
+
+    <section class="case-panel" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">界面预览</h2>
+      <div class="case-gallery cols-2">
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img src="../assets/case-library-1.jpg" alt="书库首页：布面书架与继续阅读" width="1920" height="1040" loading="eager" decoding="async" />
+          </div>
+          <figcaption class="gallery-caption">书库首页 · 布面书架与续读</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img src="../assets/case-library-2.jpg" alt="会饮篇阅读页：高亮、脚注与侧栏" width="1920" height="1040" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="gallery-caption">阅读页 · 《会饮篇》高亮、脚注与「此处」侧栏</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img src="../assets/case-library-3.jpg" alt="资料馆人物关系图" width="1920" height="1040" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="gallery-caption">资料馆 · 会饮篇人物关系图</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img src="../assets/featured-library.jpg" alt="图书馆封面截图" width="1280" height="800" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="gallery-caption">精选封面用图</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <p class="case-note">
+      线上阅读站点为登录访问，不开放公开试读链接。若之后有可分享的演示入口，会在本页加上「打开线上版」。
+    </p>
+
+    <div class="case-cta">
+      <a class="btn btn-primary" href="../index.html#featured"><span>回到精选</span></a>
+      <span class="btn btn-ghost is-disabled" aria-disabled="true">打开线上版（需登录）</span>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <div class="en">Feynman</div>
+        <div class="zh">林登凯</div>
+        <p class="blurb">全栈 · 美学与生活方式产品 · AI 工具。</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/FeynmenLin" target="_blank" rel="noopener noreferrer">GitHub · FeynmenLin</a>
+        <a href="../index.html#top">回到首页</a>
+      </div>
+    </div>
+    <div class="wrap footer-note">
+      © <span id="y"></span> Feynman / 林登凯 · 本页为个人作品集案例说明。
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

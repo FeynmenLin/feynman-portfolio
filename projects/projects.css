@@ -1,0 +1,214 @@
+/* Case pages — paper & ink, extends styles.css */
+
+.case-page {
+  position: relative;
+  z-index: 2;
+  padding: 5.5rem 0 3.5rem;
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  color: var(--ink-mute);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.case-back:hover {
+  color: var(--accent-deep);
+}
+
+.case-kicker {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.case-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 4vw, 2.55rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
+
+.case-pitch {
+  margin: 0 0 2.2rem;
+  max-width: 40rem;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.case-panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.6rem 1.55rem 1.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.case-panel h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.feature-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .feature-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 1.4rem;
+  }
+}
+
+.feature-list li {
+  position: relative;
+  padding: 0.85rem 1rem 0.9rem 2.35rem;
+  border-radius: var(--radius-sm);
+  background: rgba(196, 165, 116, 0.08);
+  border: 1px solid rgba(139, 90, 60, 0.1);
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  top: 1.15rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--accent));
+  box-shadow: 0 0 0 3px rgba(196, 165, 116, 0.22);
+}
+
+.feature-list strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-serif);
+}
+
+.case-gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .case-gallery.cols-2 {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.gallery-frame {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, #e8dccb, #f4ebe0 50%, #d9c9b2);
+  aspect-ratio: 16 / 10;
+}
+
+.gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.gallery-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.35rem;
+  height: 100%;
+  min-height: 11rem;
+  padding: 1.4rem 1.35rem;
+  color: var(--ink-soft);
+}
+
+.gallery-placeholder .ph-label {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.gallery-placeholder .ph-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.gallery-placeholder .ph-file {
+  font-size: 0.78rem;
+  color: var(--ink-mute);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.gallery-caption {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-mute);
+}
+
+.case-note {
+  margin: 0 0 1.6rem;
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(139, 90, 60, 0.28);
+  background: rgba(255, 253, 248, 0.65);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.case-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.case-cta .btn {
+  min-height: 2.7rem;
+}
+
+.case-cta .btn[aria-disabled="true"],
+.case-cta .btn.is-disabled {
+  opacity: 0.55;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.case-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
