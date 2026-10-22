@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Feynman / 林登凯的个人作品集：全栈工程、美学与生活方式产品、AI 工具。" />
+  <meta name="author" content="Feynman / 林登凯" />
+  <meta property="og:title" content="Feynman / 林登凯 · 作品集" />
+  <meta property="og:description" content="把工程、美学和日常工具做成可用的产品。" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f4ebe0" />
+  <title>Feynman / 林登凯 · 作品集</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <canvas class="dot-field" id="dot-field" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">跳到正文</a>
+
+  <aside class="section-rail" aria-hidden="true">
+    <a href="#top" data-rail="top" title="首页"></a>
+    <a href="#featured" data-rail="featured" title="精选"></a>
+    <a href="#more" data-rail="more" title="更多"></a>
+    <a href="#contact" data-rail="contact" title="联系"></a>
+  </aside>
+
+  <header class="topnav" id="topnav">
+    <div class="wrap inner">
+      <a class="brand" href="#top" aria-label="回到顶部" data-magnetic>
+        <span class="en">Feynman</span>
+        <span class="zh">林登凯</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#featured" data-magnetic>精选</a>
+        <a href="#more" data-magnetic>更多</a>
+        <a href="#contact" data-magnetic>联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top">
+      <div class="hero-aurora" aria-hidden="true">
+        <span class="mesh mesh-a"></span>
+        <span class="mesh mesh-b"></span>
+        <span class="mesh mesh-c"></span>
+        <span class="mesh mesh-d"></span>
+      </div>
+      <div class="hero-orbs" aria-hidden="true">
+        <span class="orb orb-a"></span>
+        <span class="orb orb-b"></span>
+        <span class="orb orb-c"></span>
+      </div>
+
+      <div class="hero-panel" data-tilt>
+        <div class="hero-copy" data-reveal>
+          <p class="hero-kicker"><span class="kicker-pulse"></span>Portfolio · 2024–2026</p>
+          <h1 class="hero-title" aria-label="Feynman / 林登凯">
+            <span class="title-line" data-split="Feynman"></span>
+            <span class="title-sep" aria-hidden="true">/</span>
+            <span class="title-line zh-line" data-split="林登凯"></span>
+          </h1>
+          <p class="hero-roles">
+            <span>全栈</span><span class="dot">·</span>
+            <span>美学与生活方式产品</span><span class="dot">·</span>
+            <span>AI 工具</span>
+          </p>
+          <p class="hero-lead">把工程、美学和日常工具做成可用的产品。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#featured" data-magnetic>
+              <span>看精选项目</span>
+              <span class="btn-sheen" aria-hidden="true"></span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/FeynmenLin" target="_blank" rel="noopener noreferrer" data-magnetic>GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-aside" data-reveal data-reveal-delay="160" aria-hidden="true">
+          <div class="hero-seal">
+            <div class="seal-ring seal-ring-outer"></div>
+            <div class="seal-ring seal-ring-mid"></div>
+            <div class="seal-core">
+              <span class="seal-en">FEYNMAN</span>
+              <span class="seal-zh">林登凯</span>
+              <span class="seal-mark">印</span>
+            </div>
+            <div class="seal-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="featured" aria-labelledby="featured-title">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker">Selected</p>
+          <h2 id="featured-title">精选</h2>
+        </div>
+        <p class="hint">三件最能代表我的作品</p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="card featured-card" data-reveal data-card-tilt>
+          <a class="card-media" href="https://wuxingjie.vip" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+            <img src="assets/featured-mall.jpg" alt="" width="1280" height="800" loading="eager" decoding="async" />
+            <span class="media-vignette"></span>
+            <span class="media-glow"></span>
+            <span class="media-shine"></span>
+            <span class="media-label">Live</span>
+          </a>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag">产品 · 商城</span>
+              <span class="tag muted">公开站点</span>
+            </div>
+            <h3>伍行界官网商城</h3>
+            <p>
+              品牌官网与线上商城一体：商品浏览、详情、购物车与品牌叙事同站完成。
+              面向生活方式与美学产品，兼顾手机端购买体验与品牌表达。
+            </p>
+            <div class="card-actions">
+              <a class="link" href="https://wuxingjie.vip" target="_blank" rel="noopener noreferrer" data-magnetic>访问站点 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card featured-card" data-reveal data-reveal-delay="80" data-card-tilt>
+          <div class="card-media" aria-hidden="true">
+            <img src="assets/featured-library.jpg" alt="" width="1280" height="800" loading="lazy" decoding="async" />
+            <span class="media-vignette"></span>
+            <span class="media-glow"></span>
+            <span class="media-shine"></span>
+            <span class="media-label">Case</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag">阅读器 · PWA</span>
+              <span class="tag muted">案例说明</span>
+            </div>
+            <h3>Feynman的图书馆</h3>
+            <p>
+              柏拉图阅读器：竖排分页、真机可装成主屏 PWA、注释与阅读节奏优化。
+              面向深度阅读场景打磨交互；内容与账号为登录访问，此处仅作产品案例介绍。
+            </p>
+            <div class="card-actions">
+              <span class="note">登录访问 · 不开放公开试读链接</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card featured-card" data-reveal data-reveal-delay="160" data-card-tilt>
+          <div class="card-media" aria-hidden="true">
+            <img src="assets/featured-ledger.jpg" alt="" width="1280" height="800" loading="lazy" decoding="async" />
+            <span class="media-vignette"></span>
+            <span class="media-glow"></span>
+            <span class="media-shine"></span>
+            <span class="media-label">Case</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="tag">后台 · 运营</span>
+              <span class="tag muted">案例说明</span>
+            </div>
+            <h3>伍行界账本</h3>
+            <p>
+              库存、订单、客户档案与直播补单等运营能力打通的内部账本。
+              支撑商城与线下课程协同；生产后台不对外公开，仅作系统设计案例展示。
+            </p>
+            <div class="card-actions">
+              <span class="note">内部系统 · 无公开入口</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="more" aria-labelledby="more-title">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="section-kicker">More</p>
+          <h2 id="more-title">更多项目</h2>
+        </div>
+        <p class="hint">品牌内容、课程与学习工具</p>
+      </div>
+
+      <div class="more-grid">
+        <article class="mini" data-reveal data-card-tilt>
+          <div class="mini-index" aria-hidden="true">01</div>
+          <div class="card-meta">
+            <span class="tag muted">课程平台</span>
+          </div>
+          <h3>一米学院</h3>
+          <p>伍行界线上课程专区：视频、音频与图文讲解，按分区浏览学习内容。</p>
+          <div class="links">
+            <a href="https://wuxingjie.vip/academy.html" target="_blank" rel="noopener noreferrer" data-magnetic>打开学院 →</a>
+          </div>
+        </article>
+
+        <article class="mini" data-reveal data-reveal-delay="60" data-card-tilt>
+          <div class="mini-index" aria-hidden="true">02</div>
+          <div class="card-meta">
+            <span class="tag muted">品牌叙事</span>
+          </div>
+          <h3>品牌手册</h3>
+          <p>「人在五行的世界里」——初心、一米空间与品牌四个面向的线上手册。</p>
+          <div class="links">
+            <a href="https://wuxingjie.vip/brand.html" target="_blank" rel="noopener noreferrer" data-magnetic>阅读手册 →</a>
+          </div>
+        </article>
+
+        <article class="mini" data-reveal data-reveal-delay="120" data-card-tilt>
+          <div class="mini-index" aria-hidden="true">03</div>
+          <div class="card-meta">
+            <span class="tag muted">课件 · 互动</span>
+          </div>
+          <h3>课程与互动课件</h3>
+          <p>
+            《从雅典学院到一米空间》等课件与庄子系列手机互动样稿：
+            把现场讲授做成可点击、可带走的数字教材。
+          </p>
+          <div class="links">
+            <span class="plain">暂无公开链接 · 案例介绍</span>
+          </div>
+        </article>
+
+        <article class="mini" data-reveal data-reveal-delay="180" data-card-tilt>
+          <div class="mini-index" aria-hidden="true">04</div>
+          <div class="card-meta">
+            <span class="tag muted">AI 工具</span>
+          </div>
+          <h3>AI 学习助手</h3>
+          <p>
+            苏格拉底、赫拉利等主题学习助手：用对话式追问与结构化笔记，
+            辅助阅读与复盘。个人工具向，不作为对外产品发布。
+          </p>
+          <div class="links">
+            <span class="plain">个人工具 · 仅介绍</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-inner" data-reveal>
+      <div class="footer-brand">
+        <div class="en">Feynman</div>
+        <div class="zh">林登凯</div>
+        <p class="blurb">全栈 · 美学与生活方式产品 · AI 工具。欢迎通过 GitHub 了解更多公开项目。</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/FeynmenLin" target="_blank" rel="noopener noreferrer" data-magnetic>GitHub · FeynmenLin</a>
+        <a href="#top" data-magnetic>回到顶部</a>
+      </div>
+    </div>
+    <div class="wrap footer-note">
+      © <span id="y"></span> Feynman / 林登凯 · 本页为个人作品集，业务客服请走伍行界官网渠道。
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
