@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI 学习助手：苏格拉底式追问与结构化笔记等个人学习工具。" />
+  <meta name="description" content="AI 学习助手：苏格拉底追问、赫拉利主题助手与结构化笔记等个人学习工具。" />
   <meta name="author" content="Feynman / 林登凯" />
   <meta name="theme-color" content="#f4ebe0" />
   <title>AI 学习助手 · 功能说明</title>
@@ -36,8 +36,8 @@
     <p class="case-kicker">Case · AI Tools</p>
     <h1 class="case-title">AI 学习助手</h1>
     <p class="case-pitch">
-      用对话式追问与结构化笔记辅助阅读复盘：苏格拉底、赫拉利等主题助手，
-      把「提问—澄清—归纳」嵌进学习流程。个人工具向，不作为对外产品发布。
+      一套可切换人格的对话学习骨架：苏格拉底式追问、赫拉利式宏观拆解、结构化笔记与阅读复盘。
+      个人工具向——把「提问 → 澄清 → 归纳」嵌进自己的学习闭环，不做对外产品发布。
     </p>
 
     <div class="case-meta-row">
@@ -47,66 +47,124 @@
     </div>
 
     <section class="case-panel" aria-labelledby="features-title">
-      <h2 id="features-title">具体功能</h2>
+      <h2 id="features-title">能力骨架</h2>
+      <p class="panel-lead">所有助手共用同一套交互，只换人格、知识侧重与提问策略。</p>
       <ul class="feature-list">
         <li>
-          <strong>苏格拉底追问</strong>
-          不直接给标准答案，而是连续追问定义、前提与反例，逼出自己的表述。
+          <strong>连续追问</strong>
+          不急着给标准答案，先压定义、前提与反例，逼出自己的表述。
         </li>
         <li>
           <strong>结构化笔记</strong>
-          对话后自动整理成论点、疑问与行动项，方便下次打开接着想。
+          对话后整理成论点、疑问与行动项，下次打开可接着想。
         </li>
         <li>
-          <strong>主题助手</strong>
-          苏格拉底、赫拉利等不同人格与知识侧重，按阅读主题切换助手。
+          <strong>主题人格切换</strong>
+          同一会话骨架挂接不同作者 / 课程主题，不必重写交互。
         </li>
         <li>
-          <strong>阅读复盘辅助</strong>
-          针对刚读完的段落提问「这段在主张什么」，降低囫囵吞枣。
+          <strong>阅读复盘</strong>
+          针对刚读完的段落问「这段在主张什么」，降低囫囵吞枣。
         </li>
         <li>
           <strong>个人工具定位</strong>
-          服务自己的学习闭环，不做账号体系、不做对外产品化发布。
+          服务自己的学习闭环：无对外账号体系、无公开试用入口。
         </li>
         <li>
           <strong>可扩展主题</strong>
-          同一套追问与笔记骨架，可挂接新作者 / 新课程主题而不重写交互。
+          新作者或新课程只需配置提示词与知识侧重，交互层保持不变。
         </li>
       </ul>
     </section>
 
-    <section class="case-panel" aria-labelledby="gallery-title">
-      <h2 id="gallery-title">界面预览</h2>
-      <p class="gallery-caption" style="margin-top:0;margin-bottom:0.9rem">
-        暂无产品截图；占位已按文件名预留，后续放入 assets 即可。
-      </p>
-      <div class="case-gallery cols-2">
-        <figure style="margin:0">
-          <div class="gallery-frame">
-            <div class="gallery-placeholder">
-              <span class="ph-label">Placeholder</span>
-              <span class="ph-title">对话追问界面</span>
-              <span class="ph-file">assets/case-ai-chat.jpg</span>
+    <section class="case-panel" aria-labelledby="roster-title">
+      <h2 id="roster-title">助手名册</h2>
+      <p class="panel-lead">已落地的人格配置；能力以标签标出，便于一眼看出差异。</p>
+      <ul class="roster-grid">
+        <li class="roster-card">
+          <div class="roster-card-head">
+            <div class="roster-avatar" aria-hidden="true">Σ</div>
+            <div>
+              <h3 class="roster-name">苏格拉底学习助手</h3>
+              <p class="roster-role">Socratic · 追问教练</p>
             </div>
           </div>
-          <figcaption class="gallery-caption">待补：苏格拉底对话流</figcaption>
-        </figure>
-        <figure style="margin:0">
-          <div class="gallery-frame">
-            <div class="gallery-placeholder">
-              <span class="ph-label">Placeholder</span>
-              <span class="ph-title">结构化笔记面板</span>
-              <span class="ph-file">assets/case-ai-notes.jpg</span>
+          <p class="roster-blurb">
+            以「我知道我一无所知」为基调：逼你下定义、举反例、承认无知，
+            适合哲学文本与概念澄清，而不是背诵标准答案。
+          </p>
+          <div class="chip-row">
+            <span class="chip">定义追问</span>
+            <span class="chip">反例压力</span>
+            <span class="chip">无知承认</span>
+            <span class="chip">对话复盘</span>
+          </div>
+        </li>
+
+        <li class="roster-card">
+          <div class="roster-card-head">
+            <div class="roster-avatar tone-ink" aria-hidden="true">YH</div>
+            <div>
+              <h3 class="roster-name">赫拉利主题助手</h3>
+              <p class="roster-role">Harari · 宏观拆解</p>
             </div>
           </div>
-          <figcaption class="gallery-caption">待补：笔记归纳视图</figcaption>
-        </figure>
-      </div>
+          <p class="roster-blurb">
+            按《人类简史》《未来简史》等叙事习惯：把故事、数据与宏大框架拆开，
+            追问「这段在讲什么机制」，适合通识阅读后的结构化复盘。
+          </p>
+          <div class="chip-row">
+            <span class="chip">宏观框架</span>
+            <span class="chip">机制拆解</span>
+            <span class="chip">章节复盘</span>
+            <span class="chip">论点归纳</span>
+          </div>
+        </li>
+
+        <li class="roster-card">
+          <div class="roster-card-head">
+            <div class="roster-avatar tone-sage" aria-hidden="true">莊</div>
+            <div>
+              <h3 class="roster-name">庄子阅读助手</h3>
+              <p class="roster-role">Zhuangzi · 意象对读</p>
+            </div>
+          </div>
+          <p class="roster-blurb">
+            围绕寓言与意象提问：这段比喻在推什么、你如何用当代场景重述。
+            与课件里的庄子互动样稿同一阅读脉络，偏体验而非考据。
+          </p>
+          <div class="chip-row">
+            <span class="chip">寓言对读</span>
+            <span class="chip">意象转译</span>
+            <span class="chip">当代重述</span>
+            <span class="chip">短问短答</span>
+          </div>
+        </li>
+
+        <li class="roster-card">
+          <div class="roster-card-head">
+            <div class="roster-avatar tone-wine" aria-hidden="true">FN</div>
+            <div>
+              <h3 class="roster-name">笔记归纳助手</h3>
+              <p class="roster-role">Notes · 结构化输出</p>
+            </div>
+          </div>
+          <p class="roster-blurb">
+            不扮演特定作者，专做「对话 → 卡片」：抽出主张、疑问、待查与下一步。
+            可接在任意主题助手之后，把一轮讨论收成可检索的笔记。
+          </p>
+          <div class="chip-row">
+            <span class="chip">论点卡片</span>
+            <span class="chip">疑问清单</span>
+            <span class="chip">行动项</span>
+            <span class="chip">可接任意主题</span>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <p class="case-note">
-      这是个人学习工具，没有对外公开的线上产品入口。本页只展示功能设计，不提供试用链接。
+      这是个人学习工具，没有对外公开的线上产品入口。本页展示助手配置与能力设计，不提供试用链接。
     </p>
 
     <div class="case-cta">

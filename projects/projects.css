@@ -40,11 +40,18 @@
 }
 
 .case-pitch {
-  margin: 0 0 2.2rem;
-  max-width: 40rem;
+  margin: 0 0 1.35rem;
+  max-width: 42rem;
   font-size: 1.05rem;
   color: var(--ink-soft);
   line-height: 1.75;
+}
+
+.case-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.65rem;
 }
 
 .case-panel {
@@ -57,11 +64,19 @@
 }
 
 .case-panel h2 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.22rem;
   font-weight: 600;
   letter-spacing: 0.04em;
+}
+
+.case-panel .panel-lead {
+  margin: 0 0 1.15rem;
+  max-width: 38rem;
+  font-size: 0.92rem;
+  color: var(--ink-mute);
+  line-height: 1.65;
 }
 
 .feature-list {
@@ -111,15 +126,28 @@
   font-family: var(--font-serif);
 }
 
+/* —— Gallery —— */
 .case-gallery {
   display: grid;
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
 @media (min-width: 720px) {
   .case-gallery.cols-2 {
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1fr;
   }
+
+  .case-gallery.cols-2-hero {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .case-gallery .span-2 {
+    grid-column: 1 / -1;
+  }
+}
+
+.case-gallery figure {
+  margin: 0;
 }
 
 .gallery-frame {
@@ -128,54 +156,192 @@
   overflow: hidden;
   border: 1px solid var(--line);
   background:
-    linear-gradient(135deg, #e8dccb, #f4ebe0 50%, #d9c9b2);
+    linear-gradient(160deg, #efe4d4 0%, #f7f0e6 45%, #e2d4c0 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
   aspect-ratio: 16 / 10;
 }
 
+.gallery-frame.is-natural {
+  aspect-ratio: auto;
+}
+
+.gallery-frame.is-tall {
+  aspect-ratio: 4 / 5;
+}
+
+.gallery-frame.is-square {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-frame.is-phone {
+  aspect-ratio: 9 / 19.5;
+  max-width: 22rem;
+  margin-inline: auto;
+  background: #1a1612;
+}
+
+.gallery-frame.is-phone img {
+  object-fit: cover;
+  object-position: top center;
+}
+
 .gallery-frame img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
 }
 
-.gallery-placeholder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0.35rem;
-  height: 100%;
-  min-height: 11rem;
-  padding: 1.4rem 1.35rem;
-  color: var(--ink-soft);
-}
-
-.gallery-placeholder .ph-label {
-  font-family: var(--font-en);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.gallery-placeholder .ph-title {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  color: var(--ink);
-  font-weight: 600;
-}
-
-.gallery-placeholder .ph-file {
-  font-size: 0.78rem;
-  color: var(--ink-mute);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+.gallery-frame.is-natural img {
+  height: auto;
+  object-fit: contain;
+  background: #f3ebe0;
 }
 
 .gallery-caption {
-  margin: 0.65rem 0 0;
-  font-size: 0.82rem;
+  margin: 0.7rem 0 0;
+  font-size: 0.86rem;
   color: var(--ink-mute);
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.gallery-caption strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 0.12rem;
+}
+
+/* —— Assistant roster (AI case) —— */
+.roster-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 720px) {
+  .roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+  }
+}
+
+.roster-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem 1.2rem 1.3rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(139, 90, 60, 0.14);
+  background:
+    radial-gradient(120% 80% at 0% 0%, rgba(196, 165, 116, 0.16), transparent 55%),
+    rgba(255, 252, 246, 0.92);
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.roster-card::after {
+  content: "";
+  position: absolute;
+  right: -1.2rem;
+  top: -1.2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 165, 116, 0.22), transparent 70%);
+  pointer-events: none;
+}
+
+.roster-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  position: relative;
+  z-index: 1;
+}
+
+.roster-avatar {
+  flex: 0 0 auto;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: #fffaf2;
+  background: linear-gradient(145deg, #8b5a3c, #c4a574);
+  box-shadow:
+    0 0 0 3px rgba(196, 165, 116, 0.25),
+    0 6px 16px rgba(90, 55, 30, 0.18);
+}
+
+.roster-avatar.tone-ink {
+  background: linear-gradient(145deg, #3d342c, #6b5a48);
+}
+
+.roster-avatar.tone-sage {
+  background: linear-gradient(145deg, #4a5a48, #7a8f72);
+}
+
+.roster-avatar.tone-wine {
+  background: linear-gradient(145deg, #6b3a3a, #a86b5a);
+}
+
+.roster-name {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.roster-role {
+  margin: 0.2rem 0 0;
+  font-size: 0.8rem;
+  color: var(--accent-deep);
+  letter-spacing: 0.04em;
+}
+
+.roster-blurb {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(139, 90, 60, 0.16);
 }
 
 .case-note {
@@ -186,6 +352,7 @@
   background: rgba(255, 253, 248, 0.65);
   color: var(--ink-soft);
   font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .case-cta {
@@ -204,11 +371,4 @@
   opacity: 0.55;
   pointer-events: none;
   cursor: not-allowed;
-}
-
-.case-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
 }
