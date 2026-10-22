@@ -7,6 +7,18 @@
   const hoverCapable = window.matchMedia("(hover: hover)").matches;
   const desktopFx = !reduceMotion && finePointer && hoverCapable;
 
+  /* —— Hero first-paint fade —— */
+  const unlock = () => document.body.classList.remove("is-loading");
+  if (reduceMotion) {
+    unlock();
+  } else if (document.readyState === "complete") {
+    requestAnimationFrame(() => setTimeout(unlock, 40));
+  } else {
+    window.addEventListener("load", () => requestAnimationFrame(() => setTimeout(unlock, 40)), { once: true });
+    // Fallback if load is slow (fonts): still show within 900ms
+    setTimeout(unlock, 900);
+  }
+
   /* —— Split hero title into chars —— */
   const title = document.querySelector(".hero-title");
   if (title) {

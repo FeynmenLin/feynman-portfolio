@@ -9,13 +9,27 @@
   <meta property="og:description" content="把工程、美学和日常工具做成可用的产品。" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#f4ebe0" />
+  <meta property="og:url" content="https://feynmenlin.github.io/feynman-portfolio/" />
+  <meta property="og:image" content="https://feynmenlin.github.io/feynman-portfolio/assets/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Feynman / 林登凯 · 作品集" />
+  <meta name="twitter:description" content="把工程、美学和日常工具做成可用的产品。" />
+  <meta name="twitter:image" content="https://feynmenlin.github.io/feynman-portfolio/assets/og-cover.jpg" />
+  <link rel="canonical" href="https://feynmenlin.github.io/feynman-portfolio/" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
   <title>Feynman / 林登凯 · 作品集</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="is-loading">
   <div class="grain" aria-hidden="true"></div>
   <canvas class="dot-field" id="dot-field" aria-hidden="true"></canvas>
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
@@ -24,11 +38,11 @@
 
   <a class="skip" href="#main">跳到正文</a>
 
-  <aside class="section-rail" aria-hidden="true">
-    <a href="#top" data-rail="top" title="首页"></a>
-    <a href="#featured" data-rail="featured" title="精选"></a>
-    <a href="#more" data-rail="more" title="更多"></a>
-    <a href="#contact" data-rail="contact" title="联系"></a>
+  <aside class="section-rail" aria-label="章节导航">
+    <a href="#top" data-rail="top" title="首页" aria-label="首页"></a>
+    <a href="#featured" data-rail="featured" title="精选" aria-label="精选"></a>
+    <a href="#more" data-rail="more" title="更多" aria-label="更多"></a>
+    <a href="#contact" data-rail="contact" title="联系" aria-label="联系"></a>
   </aside>
 
   <header class="topnav" id="topnav">
@@ -108,34 +122,34 @@
 
       <div class="featured-grid">
         <article class="card featured-card" data-reveal data-card-tilt>
-          <a class="card-hit" href="https://wuxingjie.vip" target="_blank" rel="noopener noreferrer">打开伍行界官网商城</a>
-          <div class="card-media" aria-hidden="true">
-            <img src="assets/featured-mall.jpg" alt="" width="1280" height="800" loading="eager" decoding="async" />
+          <a class="card-hit" href="projects/mall.html">查看伍行界官网商城功能</a>
+          <div class="card-media">
+            <img src="assets/featured-mall.jpg" alt="伍行界商城封面：青金石耳饰详情" width="1280" height="800" loading="eager" decoding="async" />
             <span class="media-vignette"></span>
             <span class="media-glow"></span>
             <span class="media-shine"></span>
-            <span class="media-label">Live</span>
+            <span class="media-label">Case</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="tag">产品 · 商城</span>
-              <span class="tag muted">公开站点</span>
+              <span class="tag muted">功能页 · 可上线</span>
             </div>
             <h3>伍行界官网商城</h3>
             <p>
-              品牌官网与线上商城一体：商品浏览、详情、购物车与品牌叙事同站完成。
-              面向生活方式与美学产品，兼顾手机端购买体验与品牌表达。
+              品牌官网与线上商城一体：分类浏览、商品详情与下单同站完成。
+              先看功能说明，再一键打开线上版。
             </p>
             <div class="card-actions">
-              <span class="link">访问站点 →</span>
+              <span class="link">查看功能 →</span>
             </div>
           </div>
         </article>
 
         <article class="card featured-card" data-reveal data-reveal-delay="80" data-card-tilt>
           <a class="card-hit" href="projects/library.html">查看 Feynman的图书馆功能</a>
-          <div class="card-media" aria-hidden="true">
-            <img src="assets/featured-library.jpg" alt="" width="1280" height="800" loading="lazy" decoding="async" />
+          <div class="card-media">
+            <img src="assets/featured-library.jpg" alt="图书馆封面：古典书架与阅读界面" width="1280" height="800" loading="lazy" decoding="async" />
             <span class="media-vignette"></span>
             <span class="media-glow"></span>
             <span class="media-shine"></span>
@@ -158,26 +172,26 @@
         </article>
 
         <article class="card featured-card" data-reveal data-reveal-delay="160" data-card-tilt>
-          <a class="card-hit" href="https://demo.wuxingjie.vip/" target="_blank" rel="noopener noreferrer">打开伍行界账本演示</a>
-          <div class="card-media" aria-hidden="true">
-            <img src="assets/featured-ledger.jpg" alt="" width="1280" height="800" loading="lazy" decoding="async" />
+          <a class="card-hit" href="projects/ledger.html">查看伍行界账本功能</a>
+          <div class="card-media">
+            <img src="assets/featured-ledger.jpg" alt="账本封面：库存相册墙" width="1280" height="800" loading="lazy" decoding="async" />
             <span class="media-vignette"></span>
             <span class="media-glow"></span>
             <span class="media-shine"></span>
-            <span class="media-label">Live</span>
+            <span class="media-label">Case</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
               <span class="tag">后台 · 运营</span>
-              <span class="tag muted">演示站点</span>
+              <span class="tag muted">功能页 · 有演示</span>
             </div>
             <h3>伍行界账本</h3>
             <p>
-              库存、订单、客户档案与直播补单等运营能力打通的账本系统。
-              支撑商城与线下课程协同；可打开演示站查看真实界面与流程。
+              库存相册墙、订单补单、客户档案与渠道视图打通的运营后台。
+              先看功能与实机界面，再打开演示站。
             </p>
             <div class="card-actions">
-              <span class="link">打开演示 →</span>
+              <span class="link">查看功能 →</span>
             </div>
           </div>
         </article>
@@ -194,36 +208,42 @@
       </div>
 
       <div class="more-grid">
-        <article class="mini" data-reveal data-card-tilt>
-          <a class="mini-hit" href="https://wuxingjie.vip/academy.html" target="_blank" rel="noopener noreferrer">打开一米学院</a>
+        <article class="mini has-thumb" data-reveal data-card-tilt>
+          <a class="mini-hit" href="projects/academy.html">查看一米学院功能</a>
+          <div class="mini-media">
+            <img src="assets/mini-academy.jpg" alt="一米学院课程分区缩略图" width="960" height="600" loading="lazy" decoding="async" />
+          </div>
           <div class="mini-index" aria-hidden="true">01</div>
           <div class="card-meta">
             <span class="tag muted">课程平台</span>
           </div>
           <h3>一米学院</h3>
-          <p>伍行界线上课程专区：视频、音频与图文讲解，按分区浏览学习内容。</p>
+          <p>线上课程专区：分区浏览视频、音频与图文讲解；可进功能页后再打开线上版。</p>
           <div class="links">
-            <span class="link">打开学院 →</span>
+            <span class="link">查看功能 →</span>
           </div>
         </article>
 
-        <article class="mini" data-reveal data-reveal-delay="60" data-card-tilt>
-          <a class="mini-hit" href="https://wuxingjie.vip/brand.html" target="_blank" rel="noopener noreferrer">阅读品牌手册</a>
+        <article class="mini has-thumb" data-reveal data-reveal-delay="60" data-card-tilt>
+          <a class="mini-hit" href="projects/brand.html">查看品牌手册功能</a>
+          <div class="mini-media">
+            <img src="assets/mini-brand.jpg" alt="品牌手册章节页缩略图" width="960" height="600" loading="lazy" decoding="async" />
+          </div>
           <div class="mini-index" aria-hidden="true">02</div>
           <div class="card-meta">
             <span class="tag muted">品牌叙事</span>
           </div>
           <h3>品牌手册</h3>
-          <p>「人在五行的世界里」——初心、一米空间与品牌四个面向的线上手册。</p>
+          <p>「人在五行的世界里」——章节叙事与图文长读；功能页说明后再打开线上手册。</p>
           <div class="links">
-            <span class="link">阅读手册 →</span>
+            <span class="link">查看功能 →</span>
           </div>
         </article>
 
         <article class="mini has-thumb" data-reveal data-reveal-delay="120" data-card-tilt>
           <a class="mini-hit" href="projects/courseware.html">查看课程与互动课件功能</a>
-          <div class="mini-media" aria-hidden="true">
-            <img src="assets/mini-courseware.jpg" alt="" width="960" height="600" loading="lazy" decoding="async" />
+          <div class="mini-media">
+            <img src="assets/mini-courseware.jpg" alt="雅典学院课件封面缩略图" width="960" height="600" loading="lazy" decoding="async" />
           </div>
           <div class="mini-index" aria-hidden="true">03</div>
           <div class="card-meta">
@@ -231,8 +251,7 @@
           </div>
           <h3>课程与互动课件</h3>
           <p>
-            《从雅典学院到一米空间》51 页叙事课件，加上庄子「游刃有余」竖屏互动样稿：
-            章节、热区与伴读，把现场讲授做成可带走的数字教材。
+            雅典学院 51 页叙事课件 + 庄子竖屏互动样稿：章节、热区与伴读，现场讲授可带走复盘。
           </p>
           <div class="links">
             <span class="link">查看功能 →</span>
@@ -241,8 +260,8 @@
 
         <article class="mini has-thumb" data-reveal data-reveal-delay="180" data-card-tilt>
           <a class="mini-hit" href="projects/ai-assistants.html">查看 AI 学习助手功能</a>
-          <div class="mini-media" aria-hidden="true">
-            <img src="assets/mini-ai.jpg" alt="" width="960" height="600" loading="lazy" decoding="async" />
+          <div class="mini-media">
+            <img src="assets/mini-ai.jpg" alt="AI 学习助手名册缩略图" width="960" height="600" loading="lazy" decoding="async" />
           </div>
           <div class="mini-index" aria-hidden="true">04</div>
           <div class="card-meta">
@@ -250,8 +269,7 @@
           </div>
           <h3>AI 学习助手</h3>
           <p>
-            苏格拉底、赫拉利、庄子与笔记归纳四套人格：追问、宏观拆解与结构化笔记，
-            嵌进个人阅读复盘。个人工具，无对外试用入口。
+            苏格拉底、赫拉利、庄子与笔记归纳四套人格：追问、拆解与结构化笔记。个人工具，无公开试用。
           </p>
           <div class="links">
             <span class="link">查看功能 →</span>

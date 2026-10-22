@@ -372,3 +372,13 @@
   pointer-events: none;
   cursor: not-allowed;
 }
+
+
+.case-cta-top {
+  margin: 0 0 1.6rem;
+}
+
+.case-page .case-back:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

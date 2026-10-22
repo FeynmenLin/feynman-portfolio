@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="页面未找到 · Feynman / 林登凯作品集" />
+  <meta name="author" content="Feynman / 林登凯" />
+  <meta name="theme-color" content="#f4ebe0" />
+  <meta name="robots" content="noindex" />
+  <title>404 · 页面未找到 · Feynman / 林登凯</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects/projects.css" />
+  <style>
+    .err-page { min-height: 70vh; display: grid; place-content: center; text-align: center; padding: 4rem 1.25rem 5rem; gap: 0.75rem; }
+    .err-code {
+      font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+      font-size: clamp(4.5rem, 14vw, 7.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.04em;
+      color: #6a4128;
+      margin: 0;
+    }
+    .err-title { font-family: "Noto Serif SC", serif; font-size: 1.45rem; margin: 0.25rem 0 0; color: #241c16; }
+    .err-copy { max-width: 28rem; margin: 0.5rem auto 1.25rem; color: #5c4e42; line-height: 1.7; }
+    .err-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topnav is-scrolled" id="topnav">
+    <div class="wrap inner">
+      <a class="brand" href="index.html#top" aria-label="回到作品集首页">
+        <span class="en">Feynman</span>
+        <span class="zh">林登凯</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="index.html#featured">精选</a>
+        <a href="index.html#more">更多</a>
+        <a href="index.html#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap err-page" id="main">
+    <p class="case-kicker">Error · 404</p>
+    <p class="err-code" aria-hidden="true">404</p>
+    <h1 class="err-title">这一页不在书架上</h1>
+    <p class="err-copy">链接可能写错了，或页面已挪走。回到作品集首页，从精选与更多项目继续浏览。</p>
+    <div class="err-actions">
+      <a class="btn btn-primary" href="index.html">
+        <span>回到首页</span>
+        <span class="btn-sheen" aria-hidden="true"></span>
+      </a>
+      <a class="btn btn-ghost" href="index.html#featured">看精选作品</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <div class="en">Feynman</div>
+        <div class="zh">林登凯</div>
+        <p class="blurb">全栈 · 美学与生活方式产品 · AI 工具。</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/FeynmenLin" target="_blank" rel="noopener noreferrer">GitHub · FeynmenLin</a>
+        <a href="index.html#top">回到首页</a>
+      </div>
+    </div>
+    <div class="wrap footer-note">
+      © <span id="y"></span> Feynman / 林登凯 · 个人作品集。
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

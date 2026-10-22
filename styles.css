@@ -139,7 +139,9 @@ a:hover {
   }
 }
 
+
 .section-rail a {
+  position: relative;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -147,6 +149,11 @@ a:hover {
   background: transparent;
   transition: transform 0.3s var(--ease-out), background 0.3s ease,
     box-shadow 0.3s ease, height 0.3s var(--ease-out), border-radius 0.3s ease;
+}
+.section-rail a::before {
+  content: "";
+  position: absolute;
+  inset: -8px -12px;
 }
 
 .section-rail a.is-active {
@@ -1244,6 +1251,41 @@ body.has-custom-cursor.cursor-hover .cursor-ring {
   }
 }
 
+
+
+/* —— Focus visibility (keyboard) —— */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.brand:focus-visible,
+.case-back:focus-visible,
+.footer-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.section-rail a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  background: var(--accent-soft);
+}
+
+/* —— First paint fade (hero) —— */
+body.is-loading .hero-panel {
+  opacity: 0;
+  transform: translateY(12px);
+}
+body:not(.is-loading) .hero-panel {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out), box-shadow 0.4s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1308,6 +1350,13 @@ body.has-custom-cursor.cursor-hover .cursor-ring {
   .cursor-dot,
   .cursor-ring {
     display: none !important;
+  }
+
+  body.is-loading .hero-panel,
+  body:not(.is-loading) .hero-panel {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
